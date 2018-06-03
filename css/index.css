@@ -1,0 +1,139 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: relative;
+}
+
+.bg_img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+}
+
+.bg_img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+div#w {
+	width: 100%;
+	height: 100%;
+}
+
+form.mui-input-group {
+	width: 80%;
+	height: 50%;
+	top: 30%;
+	left: 10%;
+	background: transparent;
+}
+
+.mui-input-group:after,
+.mui-input-group:before,
+.mui-input-group .mui-input-row:after {
+	background-color: transparent;
+}
+
+.mui-input-row {
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	margin-bottom: 16%;
+	background: rgba(0, 0, 0, .2);
+}
+
+.mui-button-row {
+	padding: 0;
+}
+
+.mui-button-row .mui-btn.mui-btn-primary {
+	background-color: transparent;
+	border: 1px solid transparent;
+	width: 80%;
+	height: 100%;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	background: rgba(0, 0, 0, .2);
+	letter-spacing: 10px;
+}
+
+.mui-input-row label {
+	color: #a5bacd;
+}
+
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+	color: #acb9ca;
+}
+
+.mui-toast-container {
+	background: transparent;
+	bottom: 50%;
+}
+
+/*.mui-toast-message {
+	opacity: 0.6;
+	color: yellow;
+	width: 180px;
+	height: 100px;
+	text-align: center;
+	line-height: 40px;
+}*/
+
+.mui-input-row label {
+	/*letter-spacing: 2px;*/
+	/*border: 1px solid red;*/
+}
+
+.mui-input-row label.aaaa {
+	/*background: yellow;*/
+	letter-spacing: 10px;
+	display: block;
+}
+
+.mui-popup.mui-popup-in {
+	background: transparent;
+	/*background-color: #2AC845;*/
+}
+
+.mui-popup-inner {
+	background: #F0AD4E;
+}
+
+
+/*购物车*/
+.mui-toast-container {
+	bottom: 50% !important;
+}
+
+.mui-toast-message {
+	/*background: url(../img/textTaskBg3.jpg) no-repeat center 10px #000;*/
+	/*background: url(../img/textTaskBg3.jpg) no-repeat;*/
+	background: #fff;
+	background-size: 100% 100%;
+	opacity: 1;
+	color: #fff;
+	width: 180px;
+	padding: 20px;
+	color: #000000;
+	/*padding: 70px 5px 10px 5px;*/
+	/*border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;*/
+}
+
+
+
+
+a{
+	display: block;
+}

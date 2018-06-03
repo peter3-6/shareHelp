@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活动海报</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+	</head>
+	<style type="text/css">
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			min-width: 320px;
+			max-width: 750px;
+			background: url(img/6.jpg);
+			background-size: 100% 100%;
+			position: relative;
+			z-index: -10;
+		}
+		#header{
+			width: 100%;
+			height: 15%;
+			background: yellowgreen;
+		}
+		#header .user_img{
+			width: 18%;
+			height: 100%;
+			background: teal;	
+		}
+		#header .user_img img{
+			width: 66%;
+			height: 53%;
+		}
+		#main{
+			width: 100%;
+			height: 45%;
+			background: yellow;
+		}
+		#footer{
+			width: 100%;
+			height: 40%;
+			background: hotpink;
+		}
+	</style>
+	<body>
+		<header id="header" class="header">
+			<div class="user_img">
+				<img src="img/user_img.jpg"/>
+			</div>
+			<div class="">
+				头部
+			</div>
+		</header>
+		<div id="main" class="main">
+			主要的
+		</div>
+		<footer id="footer" class="footer">
+			底部
+		</footer>
+	</body>
+	<script type="text/javascript" src="js/mui.js" ></script>
+	<script type="text/javascript">
+		mui.init();
+		
+	</script>
+</html>

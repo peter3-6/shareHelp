@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活动助力MUi</title>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav mui-bar-transparent">
+			<h1 class="mui-title">标题</h1>
+		</header>-->
+		<div class="bg_img">
+			<img src="img/1.png" />
+		</div>
+		<div id="w" class="w">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label class="aaaa">姓名:</label>
+					<input type="text" name="userName" placeholder="请输入姓名" id="userName">
+				</div>
+				<div class="mui-input-row">
+					<label>手机号：</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入手机号" id="mobileNumber">
+				</div>
+				<div class="mui-input-row">
+					<label>微信号：</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入微信号" id="wechatNumber">
+				</div>
+				<div class="mui-button-row" id="mui-button-row">
+					<button id="_submit" type="submit" class="mui-btn mui-btn-primary">为我助力</button>
+					<!--<a href="posters.html">进入比佛诶吉安io</a>
+					<a href="posters.html#header">4986654654654</a>-->
+					<!--<button type="button" class="mui-btn mui-btn-danger" >取消</button>-->
+				</div>
+			</form>
+		</div>
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.js"></script>
+	<script src="js/mui.js"></script>
+	<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+	<script type="text/javascript" src="js/index.js"></script>
+	<!--<script type="text/javascript">
+		$(function() {
+			var self = this;
+			$.ajax({
+				url: "http://196j624f16.iask.in/cpuPlus/clientView/generalize/add", //后台给你提供的接口
+				type: "POST",
+				data: {
+					'userName': '惠海朋',
+					'phoneNo': '15993435023',
+					'wxNo': 'h1530335468',
+				},
+				//			async: true,//异步请求
+				async: false, //同步请求
+				dataType: "json",
+				success: function(res) {
+					console.log(res);
+				},
+				err: function(err) {
+					console.log(err);
+				},
+			});
+		});
+	</script>-->
+
+	<!--<script type="text/javascript" charset="utf-8">
+		// mui插件初始化
+		mui.init();
+		//页面数据初始化加载函数
+		mui.ready(function() {
+			var mobile = '15993435023';
+			var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+			console.log(reg.test(mobile));
+			//	var timestamp = Date.parse(new Date());//获取当前时间戳1
+			var timestamp = (new Date()).valueOf(); //获取当前时间戳2
+			var nonceStr = Math.random().toString(36).substr(2);
+			console.log(timestamp, nonceStr);
+		});
+		//点击为我助力按钮的事件
+		mui('#mui-button-row').on('tap', '#_submit', function() {
+			var userName = mui('#userName')[0].value;
+			var mobileNumber = mui('#mobileNumber')[0].value;
+			var wechatNumber = mui('#wechatNumber')[0].value;
+			console.log(userName, mobileNumber, wechatNumber)
+			var _userName = userName == '' || userName == null || userName == undefined;
+			var _mobileNumber = mobileNumber == '' || mobileNumber == null || mobileNumber == undefined;
+			var _wechatNumber = wechatNumber == '' || wechatNumber == null || wechatNumber == undefined;
+			$userName(userName); //姓名
+			$mobileNumber(mobileNumber); //手机号
+			$wechatNumber(wechatNumber);//微信號
+			//			if(_userName) {
+			//				mui.toast('');
+			//				//				alert('姓名不能为空');
+			//				//				mui.toast('', {
+			//				//					duration: 'long',
+			//				//					type: 'div'
+			//				//				})
+			//			} else {
+			//				//正则验证（姓名必须为汉字）
+			//				//				var str = str.replace(/ /g,'')
+			//				var han = /^[\u4e00-\u9fa5]+$/;
+			//				var _han = han.test(userName);
+			//				console.log(_han);
+			//				//截取空字符串还没加
+			//				if(!_han) {
+			//					console.log(userName);
+			//				} else {
+			//					console.log(userName);
+			//				}
+			//			}
+		});
+		//正则判断姓名
+		function $userName(userName) {
+			var chinese = /^[\u4e00-\u9fa5]+$/;
+			if(!chinese.test(userName)) {
+				return false;
+			} else {
+				return true;
+			}
+		};
+		//正则判断手机号
+		function $mobileNumber(mobileNumber) {
+			var mobileReg = /^[1][3,4,5,7,8][0-9]{9}$/;
+			if(!mobileReg.test(mobileNumber)) {
+				return false;
+			} else {
+				return true;
+			}
+		};
+		//正则判断微信号
+		function $wechatNumber(wechatNumber) {
+			var wxReg = /^[a-zA-Z]{1}[-_a-zA-Z0-9]{5,19}$/;
+			if(!wxReg.test(wechatNumber)) {
+				return false;
+			} else {
+				return true;
+			}
+		};
+		//		function userName(){
+		//			var _userName = document.getElementById('#userName').value;
+		//			console.log(_userName)
+		//		}
+		//		mui(".mui-table-view").on('tap', '.mui-table-view-cell', function(e) {
+		//		console.log("aaaa",e)
+		//		});
+		//从后台获取初始化信息
+		//		function getWxConfig() {
+		//			//			alert('start get data');
+		//			var url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?ype=jsapi';
+		//			var token = '7_jHQE18ab8B5Vd-ikHg3nzBV34Rny1hVgzJ0U8iTwZauqIlZzRQNlUPHx7Seyq68m8WcwbD53DWInOV4HB0K_xGXw2Tmg0XdwLfQvLMVHqffOQNzxfKOahyjJMvqpO-210DQ-wNEPfcPX2ddlVPQgABAKEF';
+		//			mui.ajax({
+		//				type: "get",
+		//				url: url,
+		//				async: true,
+		//				data: {
+		//					//					"appid": "wx17cab6c2aa618213",
+		//					//					"secret": "ac0b14621dce1af61e2dec1ae512dabd",
+		//					"access_token": token,
+		//				},
+		//				dataType: "json",
+		//				//				jsonp: "jsoncallback",
+		//				success: function(data) {
+		//					alert(data);
+		//				},
+		//				error: function(xhr, type, errorThrown) {
+		//					//					console.log(xhr);
+		//					return console.log("获取验证码失败：服务器错误！");
+		//				}
+		//			});
+		//		};
+	</script>-->
+	<!--<script type="text/javascript">
+		$(function() {
+			var self = this;
+			$.ajax({
+				url: "https://api.weixin.qq.com/cgi-bin/token?jsoncallback=?grant_type=client_credential",
+				type: "GET",
+				data: {
+					"appid": "wx17cab6c2aa618213",
+					"secret": "ac0b14621dce1af61e2dec1ae512dabd"
+				},
+				//			async: true,//异步请求
+				async: false, //同步请求
+				dataType: "jsonp",
+				success: function(res) {
+					console.log(res);
+				},
+				err: function(res) {
+					console.log(res);
+				},
+				complete: function(res) {
+					console.log(res);
+					a();
+				}
+			});
+		});
+
+		function a() {
+			var a = 5;
+
+			console.log(a);
+			wxConfig();
+		}
+
+		function wxConfig() {
+			//	var timestamp = Date.parse(new Date());//获取当前时间戳1
+			var timestamp = (new Date()).valueOf(); //获取当前时间戳2
+			var nonceStr = Math.random().toString(36).substr(2);
+			console.log(timestamp, nonceStr);
+			//通过config接口注入权限验证配置
+			wx.config({
+				debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+				appId: 'wx17cab6c2aa618213', // 必填，公众号的唯一标识
+				//			timestamp: '<?php echo time();?>', // 必填，生成签名的时间戳
+				timestamp: timestamp, // 必填，生成签名的时间戳
+				//				nonceStr: '<?php echo $nonceStr;?>', // 必填，生成签名的随机串
+				nonceStr: nonceStr, // 必填，生成签名的随机串
+				signature: '<?php echo $signature;?>', // 必填，签名
+				jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ',
+					'onMenuShareWeibo', 'onMenuShareQZone', 'chooseImage',
+					'uploadImage', 'downloadImage', 'startRecord', 'stopRecord',
+					'onVoiceRecordEnd', 'playVoice', 'pauseVoice', 'stopVoice',
+					'translateVoice', 'openLocation', 'getLocation', 'hideOptionMenu',
+					'showOptionMenu', 'closeWindow', 'hideMenuItems', 'showMenuItems',
+					'showAllNonBaseMenuItem', 'hideAllNonBaseMenuItem'
+				]
+			});
+		}
+		//		//通过ready接口处理成功验证
+		//		wx.ready(function() {
+		//			// config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后
+		//		});
+	</script>-->
+
+</html>
