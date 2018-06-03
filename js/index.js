@@ -2,6 +2,7 @@
 mui.init();
 //页面数据初始化加载函数
 mui.ready(function() {
+	console.log('页面初始化');
 	//	var mobile = '15993435023';
 	//	var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
 	//	console.log(reg.test(mobile));
